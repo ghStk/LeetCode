@@ -28,7 +28,6 @@ class Solution {
         return sum;
     }
 
-    //gfdhgf
     public int[] cal(int a, int b, String s) {
         int iStart = a;
         int iEnd = b;
@@ -59,21 +58,20 @@ class Solution {
                 iPre = i;
             }
         }
+        //如果iEnd正好是最后一个
+        if (iEnd == b) return new int[]{iStart, iEnd};
+        //如果iEnd不是最后一个
         if ((b - iEnd) > delta) {
             iStart = iEnd;
             iEnd = b;
-            delta = iEnd - iStart;
         } else if ((b - iEnd) == delta) {
             d1 = cal(iStart + 1, iEnd - 1, s);
             d2 = cal(iStart + 1, b - 1, s);
             if ((d2[1] - d2[0]) > (d1[1] - d1[0])) {
                 iStart = iEnd;
                 iEnd = b;
-                delta = iEnd - iStart;
             }
         } else if ((b - iEnd) < delta) {
-            iEnd -= 1;
-            delta = iEnd - iStart;
         }
         //---结果---//
         return new int[]{iStart, iEnd};
