@@ -14,7 +14,7 @@ public class Solution2 {
         sin = s;
         max = 1;
         int start = 0;
-        int bp = -1;
+        int bp;
         //从start开始的值逐个对比
         while (max < (end - start + 1)) {
             bp = loop(start, end);
@@ -37,7 +37,6 @@ public class Solution2 {
             same = compare(start, i);
             if (same == -1) { //无重复
                 if ((i - start + 1) > max) max = i - start + 1;
-                continue;
             } else if (same > -1) { //same与i重复
                 if ((same - start + 1) > max) max = same - start + 1;
                 if ((i - same) > max) max = i - same;
