@@ -2,11 +2,9 @@ package test;
 
 import java.util.Random;
 
-/**
- * @Time: 2020-05-07 15:40
- */
+
 public class Generate {
-    private static Random ran = new Random();
+    private static final Random ran = new Random();
 
     private Generate() {
     }
