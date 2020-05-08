@@ -1,11 +1,8 @@
 package demo3;
 
 /**
- * @Time: 2020-05-07 13:19
- * 3. 无重复字符的最长子串 [Not AC]
- * 给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
+ * Not AC
  */
-
 class Solution {
     public int lengthOfLongestSubstring(String s) {
         int start = 0;
