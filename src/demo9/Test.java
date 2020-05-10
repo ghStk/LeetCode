@@ -9,12 +9,22 @@ import test.Generate;
 public class Test {
     public static void main(String[] args) {
         Solution slt = new Solution();
-        int[] arr = Generate.getInt(10);
-        arr[0] = 10001;
-        arr[1] = 215484512;
-        for (int x : arr) {
-            System.out.print("num= " + x+" isPalindrome?:");
-            System.out.println(slt.isPalindrome(x));
+//        int[] arr = Generate.getInt(10);
+//        for (int x : arr) {
+//            System.out.print("num= " + x+" isPalindrome?:");
+//            System.out.println(slt.isPalindrome(x));
+//        }
+
+        //测试随机数是回文的概率
+        int count = 0;
+        int tmp;
+        while (true) {
+            tmp = Generate.getInt();
+            count++;
+            if (slt.isPalindrome(tmp)||count>999999) break;
         }
+        System.out.println(tmp);
+        System.out.println(count);
     }
 }
+
