@@ -15,9 +15,14 @@ public class Generate {
     }
 
     public static int[] getInt(int length) {
+        return getInt(length, 0);
+    }
+
+    public static int[] getInt(int length, int bound) {
         int[] out = new int[length];
         for (int i = 0; i < length; i++) {
-            out[i] = ran.nextInt();
+            if (bound == 0) out[i] = ran.nextInt();
+            else out[i] = ran.nextInt(bound);
         }
         return out;
     }
