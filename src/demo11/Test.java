@@ -12,9 +12,13 @@ import java.util.Arrays;
  */
 public class Test {
     public static void main(String[] args) {
-        int[] height = Generate.getInt(8,10);
-        System.out.println(Arrays.toString(height));
         Solution slt = new Solution();
-        System.out.println("Max Area:"+slt.maxArea(height));
+//        for (int i = 0; i < 10; i++) {
+//            int[] height = Generate.getInt(2, 9);
+//            System.out.print(Arrays.toString(height));
+//            System.out.println(" Max Area:" + slt.maxArea(height));
+//        }
+        int[] height2 = {1,2,3,4,5,25,24,3,4};
+        System.out.println(slt.maxArea(height2));
     }
 }
