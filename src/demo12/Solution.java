@@ -4,7 +4,7 @@ package demo12;
  * 执行用时 : 4 ms , 在所有 Java 提交中击败了 100.00% 的用户
  * 内存消耗 : 39.5 MB , 在所有 Java 提交中击败了 5.55% 的用户
  */
-class Solution {
+public class Solution {
     private final StringBuilder sb = new StringBuilder();
     private final char[] one = {'I', 'X', 'C', 'M'};
     private final char[] five = {'V', 'L', 'D'};

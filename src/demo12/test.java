@@ -7,11 +7,12 @@ import test.Generate;
  */
 public class test {
     public static void main(String[] args) {
-        Solution slt = new Solution();
-//        System.out.println(slt.intToRoman(3));
-//        System.out.println(slt.intToRoman(4));
-//        System.out.println(slt.intToRoman(9));
-//        System.out.println(slt.intToRoman(58));
-        System.out.println(slt.intToRoman(1994));
+        for (int i = 0; i < 10; i++) {
+            int tmp = Generate.getInt() % 4000;
+            if (tmp < 0) tmp = -tmp;
+            Solution slt = new Solution();
+            System.out.println(tmp+" ");
+            System.out.println(slt.intToRoman(tmp));
+        }
     }
 }
