@@ -21,7 +21,6 @@ class Solution {
         map.put('M', 1000);
     }
 
-
     public int romanToInt(String s) {
         int length = s.length();
         int sum = 0;
