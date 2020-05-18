@@ -10,6 +10,7 @@ package demo8;
 public class Test {
     public static void main(String[] args) {
         Solution slt = new Solution();
-        System.out.println(slt.myAtoi("    +12323..e"));
+        System.out.println(slt.myAtoi("  65134686465132154684  "));
+        System.out.println(slt.myAtoi("-24324321534543543"));
     }
 }
