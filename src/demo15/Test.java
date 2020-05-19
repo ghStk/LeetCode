@@ -6,4 +6,8 @@ package demo15;
  * 注意：答案中不可以包含重复的三元组。
  */
 public class Test {
+    public static void main(String[] args) {
+        Solution slt = new Solution();
+        slt.threeSum(new int[] {-1,0,1,2,-1,-4});
+    }
 }
