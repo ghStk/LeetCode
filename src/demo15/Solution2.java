@@ -1,16 +1,18 @@
 package demo15;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 
 /**
- * 执行用时 : 208 ms , 在所有 Java 提交中击败了 10.05% 的用户
- * 内存消耗 : 45.1 MB , 在所有 Java 提交中击败了 93.71% 的用户
+ * 执行用时 : 184 ms , 在所有 Java 提交中击败了 10.43% 的用户
+ * 内存消耗 : 45.4 MB , 在所有 Java 提交中击败了 93.08% 的用户
  */
 class Solution2 {
     public List<List<Integer>> threeSum(int[] nums) {
         int length = nums.length;
+        /*
         for (int i = length - 1; i > 0; i--) { //s1 从小到大排序
             for (int j = 0; j < i; j++) {
                 if (nums[j] > nums[j + 1]) {
@@ -20,6 +22,8 @@ class Solution2 {
                 }
             }
         }
+        */
+        Arrays.sort(nums);
 //        -----------Test
 //        System.out.println(Arrays.toString(nums));
 //        -----------Test
