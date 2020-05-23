@@ -1,11 +1,14 @@
 package demo53;
 
-import java.util.LinkedList;
-
-class Solution { //todo
+/**
+ * #贪心
+ * 执行用时 : 1 ms , 在所有 Java 提交中击败了 95.00% 的用户
+ * 内存消耗 : 39.8 MB , 在所有 Java 提交中击败了 37.08% 的用户
+ */
+class Solution {
     public int maxSubArray(int[] nums) {
         int length = nums.length;
-        if (length == 0) return 0;
+        if (length == 0) return Integer.MIN_VALUE;
         int start = 0;
         int max = nums[0];
         while (start < length && nums[start] <= 0) start++; //找到第一个正数位置
@@ -15,36 +18,16 @@ class Solution { //todo
             }
             return max;
         }
-        LinkedList<Integer> arr = new LinkedList<>();
         int sum = nums[start];
+        max = sum;
         for (int i = start + 1; i < length; i++) {
             int tmp = nums[i];
-            if (tmp * sum >= 0) { //同号则累计
-                sum += tmp;
-            } else { //不同号则结算,进入队列
-                arr.add(sum);
-                sum = 0;
-            }
-        }
-
-        return 0;
-    }
-
-    private LinkedList<Integer> simplify(LinkedList<Integer> lst) {
-        int length = lst.size();
-        if (length <= 3) return lst;
-        LinkedList<Integer> newLst = new LinkedList<>();
-        newLst.add(lst.getFirst());
-        lst.removeFirst();
-        int sum = 0;
-        for (int tmp : lst) {
-            if (tmp * sum >= 0) {
-                sum += tmp;
+            if (tmp < 0) {
+                if ((sum += tmp) < 0) sum = 0;
             } else {
-                newLst.add(sum);
-                sum = 0;
+                if ((sum += tmp) > max) max = sum;
             }
         }
-        return simplify(newLst);
+        return max;
     }
 }
